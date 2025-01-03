@@ -5,13 +5,11 @@ import { TaskForm } from "./TaskForm";
 import { useTasks } from "../contexts/TaskContext";
 import { TeamSelector } from "./TeamSelector";
 import {
-  DragDropContext as DragDropContextRaw,
+  DragDropContext as DragDropContextComponent,
   DropResult,
 } from "react-beautiful-dnd";
 
-
-// Crear un componente funcional envoltorio
-const DragDropContext = DragDropContextRaw as unknown as ComponentType<{
+const DragDropContext = DragDropContextComponent as unknown as ComponentType<{
   onDragEnd: (result: DropResult) => void;
   children: JSX.Element;
 }>;
