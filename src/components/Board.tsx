@@ -9,6 +9,7 @@ import {
   DropResult,
 } from "react-beautiful-dnd";
 
+
 // Crear un componente funcional envoltorio
 const DragDropContext = DragDropContextRaw as unknown as ComponentType<{
   onDragEnd: (result: DropResult) => void;
